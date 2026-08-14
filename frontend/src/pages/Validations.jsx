@@ -32,30 +32,30 @@ export default function Validations() {
 
   return (
     <div>
-      <h1 className="mb-6 text-2xl font-semibold text-gray-900">Validaciones pendientes</h1>
+      <h1 className="mb-6 text-2xl font-semibold text-slate-900">Validaciones pendientes</h1>
 
       {error && <p className="mb-4 text-sm text-red-600">{error}</p>}
 
-      <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
-        <table className="min-w-full divide-y divide-gray-200 text-sm">
-          <thead className="bg-gray-50">
+      <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+        <table className="min-w-full divide-y divide-slate-200 text-sm">
+          <thead className="bg-slate-50">
             <tr>
-              <th className="px-4 py-3 text-left font-medium text-gray-500">Empleado</th>
-              <th className="px-4 py-3 text-left font-medium text-gray-500">Area</th>
-              <th className="px-4 py-3 text-left font-medium text-gray-500">Tipo</th>
-              <th className="px-4 py-3 text-left font-medium text-gray-500">Periodo</th>
-              <th className="px-4 py-3 text-right font-medium text-gray-500">Acciones</th>
+              <th className="px-4 py-3 text-left font-medium text-slate-500">Empleado</th>
+              <th className="px-4 py-3 text-left font-medium text-slate-500">Area</th>
+              <th className="px-4 py-3 text-left font-medium text-slate-500">Tipo</th>
+              <th className="px-4 py-3 text-left font-medium text-slate-500">Periodo</th>
+              <th className="px-4 py-3 text-right font-medium text-slate-500">Acciones</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-100">
+          <tbody className="divide-y divide-slate-100">
             {absences.map((absence) => (
               <tr key={absence.id}>
-                <td className="px-4 py-3 text-gray-900">
+                <td className="px-4 py-3 text-slate-900">
                   {absence.employee.first_name} {absence.employee.last_name}
                 </td>
-                <td className="px-4 py-3 text-gray-500">{absence.employee.area}</td>
-                <td className="px-4 py-3 text-gray-500">{absence.absence_type.name}</td>
-                <td className="px-4 py-3 text-gray-500">
+                <td className="px-4 py-3 text-slate-500">{absence.employee.area}</td>
+                <td className="px-4 py-3 text-slate-500">{absence.absence_type.name}</td>
+                <td className="px-4 py-3 text-slate-500">
                   {absence.start_date} - {absence.end_date}
                 </td>
                 <td className="px-4 py-3 text-right">
@@ -78,7 +78,7 @@ export default function Validations() {
             ))}
             {absences.length === 0 && (
               <tr>
-                <td colSpan={5} className="px-4 py-6 text-center text-gray-400">
+                <td colSpan={5} className="px-4 py-6 text-center text-slate-400">
                   No hay validaciones pendientes
                 </td>
               </tr>

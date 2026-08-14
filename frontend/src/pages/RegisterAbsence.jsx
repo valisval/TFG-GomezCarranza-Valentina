@@ -52,20 +52,20 @@ export default function RegisterAbsence() {
 
   return (
     <div className="max-w-2xl">
-      <h1 className="mb-6 text-2xl font-semibold text-gray-900">Registrar ausencia</h1>
+      <h1 className="mb-6 text-2xl font-semibold text-slate-900">Registrar ausencia</h1>
 
       <form
         onSubmit={handleSubmit}
-        className="space-y-4 rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
+        className="space-y-4 rounded-lg border border-slate-200 bg-white p-6 shadow-sm"
       >
         <div>
-          <label className="mb-1 block text-sm font-medium text-gray-700">Empleado</label>
+          <label className="mb-1 block text-sm font-medium text-slate-700">Empleado</label>
           <select
             name="employee_id"
             required
             value={form.employee_id}
             onChange={handleChange}
-            className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+            className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
           >
             <option value="">Seleccionar empleado</option>
             {employees.map((employee) => (
@@ -77,13 +77,13 @@ export default function RegisterAbsence() {
         </div>
 
         <div>
-          <label className="mb-1 block text-sm font-medium text-gray-700">Tipo de ausencia</label>
+          <label className="mb-1 block text-sm font-medium text-slate-700">Tipo de ausencia</label>
           <select
             name="absence_type_id"
             required
             value={form.absence_type_id}
             onChange={handleChange}
-            className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+            className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
           >
             <option value="">Seleccionar tipo</option>
             {absenceTypes.map((type) => (
@@ -96,37 +96,37 @@ export default function RegisterAbsence() {
 
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">Fecha inicio</label>
+            <label className="mb-1 block text-sm font-medium text-slate-700">Fecha inicio</label>
             <input
               type="date"
               name="start_date"
               required
               value={form.start_date}
               onChange={handleChange}
-              className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
             />
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">Fecha fin</label>
+            <label className="mb-1 block text-sm font-medium text-slate-700">Fecha fin</label>
             <input
               type="date"
               name="end_date"
               required
               value={form.end_date}
               onChange={handleChange}
-              className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
             />
           </div>
         </div>
 
         <div>
-          <label className="mb-1 block text-sm font-medium text-gray-700">Motivo</label>
+          <label className="mb-1 block text-sm font-medium text-slate-700">Motivo</label>
           <textarea
             name="reason"
             rows={3}
             value={form.reason}
             onChange={handleChange}
-            className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+            className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
             placeholder="Detalle del motivo de la ausencia"
           />
         </div>

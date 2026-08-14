@@ -8,6 +8,9 @@ export const register = (payload) =>
 
 export const refresh = () => api.post("/auth/refresh").then((res) => res.data);
 
+export const forgotPassword = (email) =>
+  api.post("/auth/forgot-password", { email }).then((res) => res.data);
+
 export const getMe = () => api.get("/users/me").then((res) => res.data);
 
 export const updateMe = (payload) => api.put("/users/me", payload).then((res) => res.data);

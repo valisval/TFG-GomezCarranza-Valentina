@@ -48,11 +48,11 @@ export default function Reports() {
   return (
     <div>
       <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-2xl font-semibold text-gray-900">Reportes</h1>
+        <h1 className="text-2xl font-semibold text-slate-900">Reportes</h1>
         <button
           onClick={handleExport}
           disabled={exporting}
-          className="rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-60"
+          className="rounded-md border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-60"
         >
           {exporting ? "Exportando..." : "Exportar CSV"}
         </button>
@@ -61,8 +61,8 @@ export default function Reports() {
       {error && <p className="mb-4 text-sm text-red-600">{error}</p>}
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <h2 className="mb-4 text-sm font-medium text-gray-700">Evolucion mensual</h2>
+        <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+          <h2 className="mb-4 text-sm font-medium text-slate-700">Evolucion mensual</h2>
           <ResponsiveContainer width="100%" height={280}>
             <LineChart data={evolution}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
@@ -74,8 +74,8 @@ export default function Reports() {
           </ResponsiveContainer>
         </div>
 
-        <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <h2 className="mb-4 text-sm font-medium text-gray-700">Comparativo por area</h2>
+        <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+          <h2 className="mb-4 text-sm font-medium text-slate-700">Comparativo por area</h2>
           <ResponsiveContainer width="100%" height={280}>
             <BarChart data={byArea}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />

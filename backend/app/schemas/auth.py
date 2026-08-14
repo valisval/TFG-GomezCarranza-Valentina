@@ -17,6 +17,14 @@ class RefreshRequest(BaseModel):
     refresh_token: str
 
 
+class ForgotPasswordRequest(BaseModel):
+    email: EmailStr
+
+
+class ForgotPasswordResponse(BaseModel):
+    message: str
+
+
 class Token(BaseModel):
     access_token: str
     token_type: str = "bearer"
